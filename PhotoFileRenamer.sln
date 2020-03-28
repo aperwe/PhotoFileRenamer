@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoFileRenamer", "PhotoFileRenamer\PhotoFileRenamer.csproj", "{5918CA64-BBFC-4E5D-B417-4C8C6B19BCB0}"
 EndProject
 Global
@@ -19,5 +21,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {F3B6047E-9DEA-439A-844F-97490AB00841}
 	EndGlobalSection
 EndGlobal

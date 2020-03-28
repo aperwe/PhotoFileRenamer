@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/Backup
+/PhotoFileRenamer/bin/Debug
+/PhotoFileRenamer/obj/Debug
+/UpgradeLog.htm

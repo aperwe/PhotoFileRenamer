@@ -64,7 +64,6 @@ namespace PhotoFileRenamer
                 return;
             }
             //We have the user's agreement to proceed
-            string newFile;
             string myNamespace = "arturp";
             XmlDocument renameLog = new XmlDocument();
             XmlDeclaration declaration = renameLog.CreateXmlDeclaration("1.0", Encoding.UTF8.WebName, "yes");
@@ -73,14 +72,12 @@ namespace PhotoFileRenamer
             renameLog.AppendChild(rootXmlNode);
             XmlNode renamesNode = renameLog.CreateNode(XmlNodeType.Element, "renames", myNamespace);
             rootXmlNode.AppendChild(renamesNode);
-            XmlNode renamedFileXmlNode = null;
-            XmlAttribute attribute = null;
             foreach (string oldFile in renames.Keys)
             {
-                if (renames.TryGetValue(oldFile, out newFile))
+                if (renames.TryGetValue(oldFile, out string newFile))
                 {
-                    renamedFileXmlNode = renameLog.CreateNode(XmlNodeType.Element, "renamedFile", myNamespace);
-                    attribute = renameLog.CreateAttribute("oldFile");
+                    XmlNode renamedFileXmlNode = renameLog.CreateNode(XmlNodeType.Element, "renamedFile", myNamespace);
+                    XmlAttribute attribute = renameLog.CreateAttribute("oldFile");
                     attribute.Value = Path.GetFileName(oldFile);
                     renamedFileXmlNode.Attributes.Append(attribute);
                     attribute = renameLog.CreateAttribute("newFile");
