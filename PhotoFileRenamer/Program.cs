@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using System.Collections;
 using System.Xml;
+using System.Reflection;
 
 namespace PhotoFileRenamer
 {
@@ -11,6 +12,8 @@ namespace PhotoFileRenamer
     {
         static void Main(string[] args)
         {
+            //Show name/version of the assembly.
+            Console.WriteLine(Assembly.GetExecutingAssembly().FullName);
             if (args.Length < 2)
             {
                 Console.WriteLine("Too few arguments.");
